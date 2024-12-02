@@ -1,9 +1,9 @@
 # BNRTools
 
 <!-- badges: start -->
-
-[![Codecov test coverage](https://codecov.io/gh/iiasa/BNRTools/graph/badge.svg)](https://app.codecov.io/gh/iiasa/BNRTools)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/iiasa/BNRTools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/iiasa/BNRTools/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/iiasa/BNRTools/graph/badge.svg)](https://app.codecov.io/gh/iiasa/BNRTools)
 <!-- badges: end -->
 
 This repository contains a common set of functions and scripts used by BNR Researchers. It's purpose is to avoid replication of efforts across different groups and maintain common scripts in a structured way. Use cases might for example include the reprojection to certain grids, the conversion of model output formats to different format types or generic commonly used helper functions.
