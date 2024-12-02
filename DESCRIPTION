@@ -13,6 +13,8 @@ Authors@R:
       )
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
+URL: https://github.com/iiasa/BNRTools
+BugReports: https://github.com/iiasa/BNRTools/issues
 Depends: R (>= 3.6)
 Imports:
   assertthat,
