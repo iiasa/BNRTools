@@ -16,7 +16,7 @@ sp_replaceGriddedNA(obj, value = 0, mask, verbose = FALSE)
 \item{verbose}{Be chatty about what is processed (Default: \code{FALSE}).}
 }
 \value{
-A object of the same type as the input but with no-data values replaced with \code{0}.
+A object of the same type as the input but with no-data values replaced with \code{'value'}.
 }
 \description{
 This function replaces all NA values in a spatial gridded layer with
@@ -30,8 +30,10 @@ all no-data values a replaced with the value in this mask.
 }
 \examples{
 # Example
-s <- rast(system.file("ex/logo.tif", package="terra"))
-s[]
+s <- terra::rast(system.file("ex/logo.tif", package="terra"))
+s[sample(1:terra::ncell(s), 100)] <- NA
+sfill <- sp_replaceGriddedNA(s, value = 100)
+terra::plot(sfill)
 
 }
 \author{
