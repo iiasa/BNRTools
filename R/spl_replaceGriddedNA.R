@@ -17,10 +17,10 @@
 #'
 #' @examples
 #' # Example
-#' s <- rast(system.file("ex/logo.tif", package="terra"))
+#' s <- terra::rast(system.file("ex/logo.tif", package="terra"))
 #' s[sample(1:terra::ncell(s), 100)] <- NA
 #' sfill <- sp_replaceGriddedNA(s, value = 100)
-#' plot(sfill)
+#' terra::plot(sfill)
 #'
 #' @returns A object of the same type as the input but with no-data values replaced with \code{'value'}.
 #' @author Martin Jung
