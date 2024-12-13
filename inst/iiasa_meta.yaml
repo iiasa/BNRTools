@@ -1,0 +1,51 @@
+# Global information
+global:
+  publisher_name: "IIASA"
+  publisher_email: "info@iiasa.ac.at"
+  publisher_url: "https://iiasa.ac.at"
+  publisher_institution: "International Institute for Applied Systems Analysis (IIASA)"
+  # publisher_type = "",
+  conventions: "CF-1.8"
+  standard_name_vocabulary: "CF Standard Name Table v1.8"
+  naming_authority: "iiasa.ac.at"
+  history: "https://github.com/iiasa/BNRTools"
+  source: "https://github.com/iiasa/BNRTools"
+
+# Creater information
+creator:
+  creator_name: ""
+  creator_email: ""
+  creator_url: "https://iiasa.ac.at"
+  creator_institution: "International Institute for Applied Systems Analysis (IIASA)"
+  project: "iBIOM"
+
+file:
+  id: 1
+  title: ""
+  summary: ""
+  date_created: ""
+  date_modified: ""
+  date_issued: ""
+  processing_level: ""
+  license: "CC-BY 4.0"
+  comment: "Uses attributes recommended by http://cfconventions.org"
+  citation: ""
+  acknowledgment: ""
+
+# Spatial metadata
+spatial:
+  geospatial_bounds: ""
+  geospatial_bounds_crs: ""
+  geospatial_bounds_vertical_crs: ""
+  geospatial_lat_name: "latitude"
+  geospatial_lon_name: "longitude"
+  geospatial_lat_units: "degrees_north"
+  geospatial_lon_units: "degrees_east"
+  geospatial_lat_min: -90
+  geospatial_lat_max: 90
+  geospatial_lon_min: -180
+  geospatial_lon_max: 180
+  time_coverage_start: 2000
+  time_coverage_end: 2100
+  time_coverage_duration: "100"
+  time_coverage_resolution: "year"
