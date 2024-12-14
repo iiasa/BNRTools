@@ -19,6 +19,7 @@
 #' To update or overwrite, load the file and update, then apply
 #' \code{usethis::use_data(bnr_datapaths, overwrite = TRUE) }.
 #'
+#' @keywords internal
 #' @format A [data.frame] containing paths to key spatial data sources.
 #' @source Manually updated and curated by BNR researchers
 "bnr_datapaths"

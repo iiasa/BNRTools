@@ -21,12 +21,16 @@ Imports:
   janitor,
   assertthat,
   terra,
+  stars,
   RNetCDF,
+  ncdf4,
   yaml
 Suggests:
   gdalUtilities,
-  stars,
+  cubelyr,
+  dplyr,
   purrr,
+  progress,
   testthat (>= 3.0.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

@@ -21,6 +21,22 @@ please stick to the following house rules:
 
 See this [website](https://r-pkgs.org/) for more general help and examples in developing content for R-packages.
 
+## Installation
+
+The `BNRTools` package can be installed either through the `remotes` R-package or
+directly from r-universe.
+
+```r
+# Install from source
+remotes::install_github("iiasa/BNRTools")
+# Or for the current development branch
+remotes::install_github("iiasa/BNRTools", "dev")
+
+# Installation 
+install.packages('BNRTools', repos = "https://iiasa.r-universe.dev")
+
+```
+
 ## Code of Conduct
 
 Please note that the BNRTools project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
