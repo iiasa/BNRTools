@@ -49,4 +49,7 @@ covariates <- conv_downscalr2ibis(fname)
 }
 
 }
+\author{
+Martin Jung
+}
 \keyword{conversion}

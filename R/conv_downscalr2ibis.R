@@ -48,7 +48,7 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
 
   # Try and load in the GLOBIOM file to get the attributes
   fatt <- ncdf4::nc_open(fname)
-  if(verbose) myLog('[Setup]','green',"Found ", fatt$ndims, " dimensions and ", fatt$nvars, " variables")
+  if(verbose) cli::cli_alert_warning(paste0("[Setup] Found ", fatt$ndims, " dimensions and ", fatt$nvars, " variables"))
 
   # Get all dimension names and variable names
   dims <- names(fatt$dim)
@@ -57,12 +57,12 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
 
   attrs <- list() # For storing the attributes
   sc <- vector() # For storing the scenario files
-  sc_area <- new_waiver() # For storing any area information if set
+  sc_area <- list() # For storing any area information if set
 
   # Now open the netcdf file with stars
   if( length( grep("netcdf", stars::detect.driver(fname), ignore.case = TRUE) )>0 ){
     if(verbose){
-      myLog('[Predictor]','green',"Loading in predictor file...")
+      cli::cli_alert_warning("[Predictor] Loading in predictor file...")
       pb <- progress::progress_bar$new(total = length(vars),
                                        format = "Loading :variable (:spin) [:bar] :percent")
     }
@@ -125,7 +125,7 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
             make.names(unlist(class_units)) |> as.vector()
           )
 
-          ff <- ff |> stars:::split.stars(col_class) |> stats::setNames(nm = class_units)
+          ff <- ff |> split(col_class) |> stats::setNames(nm = class_units)
 
           # FIXME: Dirty hack to deal with the forest zone dimension
           # If there are more dimensions than 3, aggregate over them
@@ -137,7 +137,7 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
       }
 
       # Finally aggregate
-      if(!is.null(template) && is.Raster(template)){
+      if(!is.null(template) && inherits(template, "SpatRaster")){
         # FIXME: MJ 14/11/2022 - The code below is buggy, resulting in odd
         # curvilinear extrapolations for Europe Hacky approach now is to convert
         # to raster, crop, project and then convert back. Only use if gdalUtils
@@ -186,9 +186,9 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
   # Make checks on length of times and if equal to one, drop. check.
   if(length(times)==1){
     if(period == "projection") cli::cli_abort("Found only a single time slot. Projections not possible.")
-    if(verbose) myLog('[Setup]','yellow','Found only a single time point in file. Dropping time dimension.')
+    if(verbose) cli::cli_alert_warning('[Setup] Found only a single time point in file. Dropping time dimension.')
     # Drop the time dimension
-    sc <- stars:::adrop.stars(sc, drop = which(names(stars::st_dimensions(sc)) == "time") )
+    sc <- abind::adrop(sc, drop = which(names(stars::st_dimensions(sc)) == "time") )
   }
 
   # Formate times unit and convert to posix if not already set
@@ -204,13 +204,13 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
     if(length(times)>1){
       # In case times got removed
       times_first <- stars::st_get_dimension_values(sc, "time")[1]
-      sc <- sc |> stars:::filter.stars(time == times_first)
+      sc <- sc |> dplyr::filter("time" == times_first)
       times <- times_first;rm(times_first)
     }
   } else if(period == "projection"){
     # Remove the first time entry instead, only using the last entries
     times_allbutfirst <- stars::st_get_dimension_values(sc, "time")[-1]
-    sc <- sc |> stars:::filter.stars(time %in% times_allbutfirst)
+    sc <- sc |> dplyr::filter("time" %in% times_allbutfirst)
     times <- times_allbutfirst; rm(times_allbutfirst)
   }
   assertthat::assert_that(length(times)>0,
@@ -220,7 +220,7 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
   if(!is.null(template)){
     # Check that template is a raster, otherwise rasterize for GLOBIOM use
     if(inherits(template, "sf")){
-      o <- sc |> stars:::slice.stars("time" , 1) |> terra::rast()
+      o <- sc |> dplyr::slice("time" , 1) |> terra::rast()
       template <- terra::rasterize(template, o, field = 1)
       rm(o)
     }

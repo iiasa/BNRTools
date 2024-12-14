@@ -19,16 +19,18 @@ Depends: R (>= 3.6)
 Imports:
   cli,
   janitor,
+  dplyr,
   assertthat,
+  sf,
   terra,
   stars,
+  abind,
   RNetCDF,
   ncdf4,
   yaml
 Suggests:
   gdalUtilities,
   cubelyr,
-  dplyr,
   purrr,
   progress,
   testthat (>= 3.0.0)
