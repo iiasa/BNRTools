@@ -49,3 +49,6 @@ po/*~
 rsconnect/
 .Rproj.user
 docs
+
+# Other temporary files created by some functions
+test.nc

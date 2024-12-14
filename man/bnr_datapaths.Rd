@@ -32,4 +32,4 @@ The file has the following columns:
 To update or overwrite, load the file and update, then apply
 \code{usethis::use_data(bnr_datapaths, overwrite = TRUE) }.
 }
-\keyword{datasets}
+\keyword{internal}

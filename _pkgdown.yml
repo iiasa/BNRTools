@@ -1,4 +1,54 @@
 url: https://iiasa.github.io/BNRTools/
+
+development:
+  mode: auto
+
 template:
   bootstrap: 5
+  bootswatch: zephyr
+  bslib:
+    pkgdown-nav-height: 80px
+  opengraph:
+    twitter:
+      creator: "@IIASAVienna"
+      site: "@IIASAVienna"
+      card: summary
 
+home:
+  title: The BNRTools package - Helper functions for IIASA researchers
+  description: Community managed R-package containing different scripts a
+  sidebar:
+    structure: [links, citation, license, authors, dev]
+  links:
+    - text: IIASA
+      href: https://iiasa.ac.at/
+
+navbar:
+  structure:
+    left:  [home, reference, news]
+    right: [search, github]
+
+reference:
+  - title: Conversion functions
+    desc: >
+      Key functions to convert model outputs for use in other modelling environments.
+    contents:
+      - conv_downscalr2ibis
+      - has_keyword("conversion")
+
+  - title: Spatial functions
+    desc: >
+      Helper function combine, aggregate or otherwise modify spatial files.
+    contents:
+      - spl_resampleRas
+      - spl_exportNetCDF
+      - spl_replaceGriddedNA
+      - has_keyword("spatial")
+
+  - title: Miscellaneous functions
+    desc: >
+      Any other functions that are generally useful for a wide range of applications.
+    contents:
+      - has_keyword("utils")
+      - misc_objectSize
+      - misc_sanitizeNames

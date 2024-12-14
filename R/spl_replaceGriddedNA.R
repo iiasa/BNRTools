@@ -19,14 +19,14 @@
 #' # Example
 #' s <- terra::rast(system.file("ex/logo.tif", package="terra"))
 #' s[sample(1:terra::ncell(s), 100)] <- NA
-#' sfill <- sp_replaceGriddedNA(s, value = 100)
+#' sfill <- spl_replaceGriddedNA(s, value = 100)
 #' terra::plot(sfill)
 #'
 #' @returns A object of the same type as the input but with no-data values replaced with \code{'value'}.
 #' @author Martin Jung
 #' @keywords internal, utils
 #' @export
-sp_replaceGriddedNA <- function(obj, value = 0, mask, verbose = FALSE){
+spl_replaceGriddedNA <- function(obj, value = 0, mask, verbose = FALSE){
   assertthat::assert_that(
     inherits(obj, "stars") || inherits(obj, "SpatRaster"),
     is.numeric(value) || length(value)==1,

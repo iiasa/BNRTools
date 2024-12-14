@@ -22,6 +22,11 @@ misc_sanitizeNames <- function(names){
   assertthat::assert_that(
     length(names) > 0
   )
+  cli::cli_alert_info("Note: Method deprecated. Just janitor::make_clean_names() directly!")
+  return(
+    janitor::make_clean_names(names)
+  )
+
   # Convert the variable names
   new_names <- vapply(names, function(x) {
     gsub("[-() ]", "_", x = x, fixed = FALSE)
