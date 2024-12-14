@@ -12,13 +12,13 @@ test_that("Spatial object modifications", {
   # NA replacements #
   r1[sample(1:terra::ncell(r1),100)] <- NA
   expect_no_error(
-    r1_filled <- sp_replaceGriddedNA(r1, value = 0)
+    r1_filled <- spl_replaceGriddedNA(r1, value = 0)
   )
   expect_s4_class(r1_filled, "SpatRaster")
   expect_equal(terra::global(r1_filled,"min")[,1], 0) # Should be 0
   # Use layer 2 for masking instead
   expect_no_error(
-    r1_filled2 <- sp_replaceGriddedNA(r1,mask = r2)
+    r1_filled2 <- spl_replaceGriddedNA(r1,mask = r2)
   )
   expect_s4_class(r1_filled2, "SpatRaster")
   # --- #
