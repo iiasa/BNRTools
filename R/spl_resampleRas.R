@@ -26,10 +26,10 @@
 #'  terra::values(ras_a) <- runif(n = terra::ncell(ras_a))
 #'  terra::values(ras_b) <- runif(n = terra::ncell(ras_b))
 #'
-#'  sp_resampleRas(x = ras_a, y = ras_b)
+#'  spl_resampleRas(x = ras_a, y = ras_b)
 #'
 #' @export
-sp_resampleRas <- function(x, y, discrete = FALSE) {
+spl_resampleRas <- function(x, y, discrete = FALSE) {
 
   # MH: Switch this to assertthat::assert_that()
   # check if CRS are already the same

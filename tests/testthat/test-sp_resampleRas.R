@@ -9,7 +9,7 @@ terra::values(ras_b) <- runif(n = terra::ncell(ras_b))
 
 test_that("sp_resampleRas results in same resolution/extent", {
 
-  ras_a_res <- sp_resampleRas(x = ras_a, y = ras_b)
+  ras_a_res <- spl_resampleRas(x = ras_a, y = ras_b)
 
   expect_true(terra::compareGeom(ras_a_res, ras_b))
 
