@@ -1,0 +1,18 @@
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://iiasa.github.io/BNRTools/404.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/LICENSE-text.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/LICENSE.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/authors.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/index.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/bnr_datapaths.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/conv_downscalr2ibis.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/grapes-notin-grapes.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/index.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/misc_objectSize.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/misc_sanitizeNames.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_exportNetCDF.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_replaceGriddedNA.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_resampleRas.html</loc></url>
+</urlset>
+
