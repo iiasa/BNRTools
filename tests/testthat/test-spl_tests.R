@@ -22,6 +22,4 @@ test_that("Spatial object modifications", {
   )
   expect_s4_class(r1_filled2, "SpatRaster")
   # --- #
-
-
 })
