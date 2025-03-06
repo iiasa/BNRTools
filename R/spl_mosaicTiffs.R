@@ -10,7 +10,7 @@
 #' together using a \code{'vrt'} file format.
 #'
 #' @details
-#' This function by default uses the [`gdalUtilities`] R-package and tools
+#' This function by default uses the \code{'gdalUtilities'} R-package and tools
 #' for most of the projections.
 #'
 #' @param files A [`character`] vector with filenames of spatial files.
@@ -19,7 +19,7 @@
 #' @param dt A [`character`] with the output datatype of the spatial file (Default: \code{"INT2S"}).
 #' @param ... Any other parameters passed to [`writeRaster`].
 #'
-#' @returns [`SpatRaster`]
+#' @returns A [`SpatRaster`] or just a file.
 #'
 #' @keywords spatial
 #' @author Martin Jung
@@ -35,7 +35,6 @@
 #'  # Mosaic
 #'  spl_mosaicTiffs(ll, "full_file.tif")
 #' }
-#' set.seed(42)
 #'
 #' @export
 spl_mosaicTiffs <- function(files,

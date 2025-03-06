@@ -18,7 +18,7 @@ spl_mosaicTiffs(files, ofname = NULL, tempdir = NULL, dt = "INT2S", ...)
 \item{...}{Any other parameters passed to \code{\link{writeRaster}}.}
 }
 \value{
-\code{\link{SpatRaster}}
+A \code{\link{SpatRaster}} or just a file.
 }
 \description{
 Particular for large spatial files, it is often impractical
@@ -30,7 +30,7 @@ This function takes a list of filenames as input and mosaics them
 together using a \code{'vrt'} file format.
 }
 \details{
-This function by default uses the \code{\link{gdalUtilities}} R-package and tools
+This function by default uses the \code{'gdalUtilities'} R-package and tools
 for most of the projections.
 }
 \examples{
@@ -41,7 +41,6 @@ for most of the projections.
  # Mosaic
  spl_mosaicTiffs(ll, "full_file.tif")
 }
-set.seed(42)
 
 }
 \seealso{
