@@ -30,6 +30,7 @@
 #' \code{\link[terra]{writeRaster}}
 #'
 #' @examples
+#' \dontrun{
 #' # Load default metadata (loaded by default by function too)
 #' meta <- yaml::read_yaml(system.file("iiasa_meta.yaml", package = "BNRTools"))
 #'
@@ -44,6 +45,7 @@
 #' # Export
 #' spl_exportNetCDF(obj, filename = "test.nc",
 #'                      global_meta = meta, title = "Super cool analysis")
+#' }
 #' @export
 spl_exportNetCDF <- function(obj,
                              filename,
