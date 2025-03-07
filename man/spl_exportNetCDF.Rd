@@ -37,6 +37,7 @@ The default metadata is contained in \code{"inst/iiasa_meta"}. See examples.
 A support for \code{'stars'} could be added.
 }
 \examples{
+\dontrun{
 # Load default metadata (loaded by default by function too)
 meta <- yaml::read_yaml(system.file("iiasa_meta.yaml", package = "BNRTools"))
 
@@ -51,6 +52,7 @@ obj <- terra::rast(ncol = 100, nrow = 100,
 # Export
 spl_exportNetCDF(obj, filename = "test.nc",
                      global_meta = meta, title = "Super cool analysis")
+}
 }
 \seealso{
 \code{\link[terra]{writeCDF}},

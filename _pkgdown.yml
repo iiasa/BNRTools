@@ -43,6 +43,7 @@ reference:
       - spl_resampleRas
       - spl_exportNetCDF
       - spl_replaceGriddedNA
+      - spl_growGrid
       - has_keyword("spatial")
 
   - title: Miscellaneous functions
