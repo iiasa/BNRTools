@@ -12,6 +12,8 @@
 <url><loc>https://iiasa.github.io/BNRTools/reference/misc_objectSize.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/misc_sanitizeNames.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_exportNetCDF.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_growGrid.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_mosaicTiffs.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_replaceGriddedNA.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_resampleRas.html</loc></url>
 </urlset>
