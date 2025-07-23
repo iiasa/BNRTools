@@ -50,7 +50,7 @@ spl_summarizeGPKGlayers <- function(folder, verbose = TRUE) {
     ff <- sf::st_layers(ifname, do_count = TRUE)
 
     # Format CRS name
-    if(is.na(ff$crs)) {
+    if(all(is.na(ff$crs))) {
       crs <- NA_character_
     } else {
       # Assuming all layers have the same crs
