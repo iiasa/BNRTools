@@ -7,19 +7,19 @@
 spl_growGrid(x, iter = 2)
 }
 \arguments{
-\item{x}{A categorical \code{\link{SpatRaster}} to be grown.}
+\item{x}{A categorical \code{\link[terra:SpatRaster]{SpatRaster}} to be grown.}
 
 \item{iter}{A \code{\link{numeric}} values of the maximum number of iterations from the grid
 cell border of which \code{x} should be grown (Default: \code{2}).}
 }
 \value{
-\code{\link{SpatRaster}}
+\code{\link[terra:SpatRaster]{SpatRaster}}
 }
 \description{
 A common issue in aggregating categorical rasters is that coastal and boundary
 gridcells tend to decrease owing to aggregation effects. This can cause issues
 of non-matching grid cells later on.
-This simple function takes a categorical \code{\link{SpatRaster}} object and grows it
+This simple function takes a categorical \code{\link[terra:SpatRaster]{SpatRaster}} object and grows it
 into no-data areas (those with \code{NA} values) within an optionally provided
 distance.
 }

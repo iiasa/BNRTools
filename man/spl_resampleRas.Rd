@@ -7,14 +7,14 @@
 spl_resampleRas(x, y, discrete = FALSE)
 }
 \arguments{
-\item{x}{A \code{\link{SpatRaster}} to be resampled.}
+\item{x}{A \code{\link[terra:SpatRaster]{SpatRaster}} to be resampled.}
 
-\item{y}{A \code{\link{SpatRaster}} to which \code{x} will be resampled}
+\item{y}{A \code{\link[terra:SpatRaster]{SpatRaster}} to which \code{x} will be resampled}
 
 \item{discrete}{\code{\link{logical}} to specifiy if input raster has continitous or discrete values}
 }
 \value{
-\code{\link{SpatRaster}}
+\code{\link[terra:SpatRaster]{SpatRaster}}
 }
 \description{
 Resample two raster to the spatial resolution using aggregation or disaggregation.

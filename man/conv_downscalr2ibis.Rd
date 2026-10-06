@@ -23,7 +23,7 @@ conv_downscalr2ibis(
 formatted data. Options include \code{"reference"} for the first entry, \code{"projection"}
 for all entries but the first, and \code{"all"} for all entries (Default: \code{"reference"}).}
 
-\item{template}{An optional \code{\link{SpatRaster}} object towards which projects
+\item{template}{An optional \code{\link[terra:SpatRaster]{SpatRaster}} object towards which projects
 should be transformed.}
 
 \item{shares_to_area}{A \code{\link{logical}} on whether shares should be corrected to
@@ -34,7 +34,7 @@ areas (if identified).}
 \item{verbose}{\code{\link{logical}} on whether to be chatty.}
 }
 \value{
-A \code{\link{SpatRaster}} stack with the formatted GLOBIOM predictors.
+A \code{\link[terra:SpatRaster]{SpatRaster}} stack with the formatted GLOBIOM predictors.
 }
 \description{
 This function expects a downscaled GLOBIOM output as created in
