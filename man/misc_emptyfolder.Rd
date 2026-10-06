@@ -21,8 +21,10 @@ It also checks whether the directory is newly created or already existed.
 }
 \examples{
 # Check and create a directory
-is_empty <- check_or_create_empty_dir("my_test_folder")
+dir_path <- tempfile()
+is_empty <- misc_emptyfolder(dir_path)
 print(is_empty)
+unlink(dir_path, recursive = TRUE)
 }
 \author{
 Martin Jung

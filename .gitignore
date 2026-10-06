@@ -52,3 +52,8 @@ docs
 
 # Other temporary files created by some functions
 test.nc
+
+# Other agent related things that some users might push
+.copilot/
+.claude/
+.vscode/

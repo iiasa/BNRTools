@@ -2,6 +2,7 @@
 
 export("%notin%")
 export(conv_downscalr2ibis)
+export(misc_emptyfolder)
 export(misc_objectSize)
 export(misc_sanitizeNames)
 export(spl_clipMask)

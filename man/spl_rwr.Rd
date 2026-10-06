@@ -18,7 +18,7 @@ A logical value: \code{TRUE} if the directory is empty (or newly created), \code
 }
 \description{
 This function calculates a rarity-weighted richness estimate from modelled species distributions,
-which can for example be obtained from the \code{\link{ibis.iSDM}} R-package. The input maps should ideally be binary
+which can for example be obtained from the \code{`ibis.iSDM`} R-package. The input maps should ideally be binary
 presence-absence maps, but the function can also handle continuous predictions.
 }
 \details{

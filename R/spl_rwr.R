@@ -2,7 +2,7 @@
 #'
 #' @description
 #' This function calculates a rarity-weighted richness estimate from modelled species distributions,
-#' which can for example be obtained from the [`ibis.iSDM`] R-package. The input maps should ideally be binary
+#' which can for example be obtained from the \code{`ibis.iSDM`} R-package. The input maps should ideally be binary
 #' presence-absence maps, but the function can also handle continuous predictions.
 #'
 #' @details

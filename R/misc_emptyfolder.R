@@ -11,10 +11,13 @@
 #' @return A logical value: `TRUE` if the directory is empty (or newly created), `FALSE` otherwise.
 #' @author Martin Jung
 #' @author Contributors: ChatGPT
+#' @export
 #' @examples
 #' # Check and create a directory
-#' is_empty <- check_or_create_empty_dir("my_test_folder")
+#' dir_path <- tempfile()
+#' is_empty <- misc_emptyfolder(dir_path)
 #' print(is_empty)
+#' unlink(dir_path, recursive = TRUE)
 misc_emptyfolder <- function(dir_path) {
   # Check if directory exists
   if (!dir.exists(dir_path)) {
