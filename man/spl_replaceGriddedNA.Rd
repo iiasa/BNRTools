@@ -7,11 +7,11 @@
 spl_replaceGriddedNA(obj, value = 0, mask, verbose = FALSE)
 }
 \arguments{
-\item{obj}{A \code{\link{SpatRaster}}, \code{\link{SpatRasterDataset}} or \code{\link{stars}} object.}
+\item{obj}{A \code{\link[terra:SpatRaster]{SpatRaster}}, \code{\link[terra:SpatRasterDataset]{SpatRasterDataset}} or \code{\link{stars}} object.}
 
 \item{value}{A fixed numeric value of which all \code{NA} values are to be replaced with (Default: \code{0}).}
 
-\item{mask}{An optional \code{\link{SpatRaster}} object used instead of the value.}
+\item{mask}{An optional \code{\link[terra:SpatRaster]{SpatRaster}} object used instead of the value.}
 
 \item{verbose}{Be chatty about what is processed (Default: \code{FALSE}).}
 }
@@ -20,7 +20,7 @@ A object of the same type as the input but with no-data values replaced with \co
 }
 \description{
 This function replaces all NA values in a spatial gridded layer with
-a fixed value such as for example \code{0}. Accepted input layers are for \code{\link{SpatRaster}} from
+a fixed value such as for example \code{0}. Accepted input layers are for \code{\link[terra:SpatRaster]{SpatRaster}} from
 the \code{"terra"} R-package and \code{\link{stars}} from the \code{"stars"} R-package.
 }
 \details{

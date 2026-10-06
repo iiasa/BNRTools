@@ -13,7 +13,7 @@ spl_exportNetCDF(
 )
 }
 \arguments{
-\item{obj}{A \code{\link{SpatRaster}} object to be exported.}
+\item{obj}{A \code{\link[terra:SpatRaster]{SpatRaster}} object to be exported.}
 
 \item{filename}{A \code{\link{character}} with the output filename.}
 
