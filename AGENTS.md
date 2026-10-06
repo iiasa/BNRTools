@@ -35,6 +35,8 @@ conversion (`conv_*`), and spatial vector and raster processing (`spl_*`).
   Include a concise title and description, an `@param` for every argument, a
   correct `@return`, and useful `@examples`; add details, keywords, and
   cross-references when they help users.
+- When adding a new function, always ensure that it is index in the `pkgdown.yml`
+  file.
 - Make examples reproducible from a clean R session: create their own small
   inputs, set a seed when randomness matters, and avoid local paths or
   interactive-only objects. Use `\dontrun{}` only when an example genuinely
