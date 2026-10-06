@@ -1,5 +1,6 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://iiasa.github.io/BNRTools/404.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/AGENTS.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/CODE_OF_CONDUCT.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/LICENSE-text.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/LICENSE.html</loc></url>
@@ -9,12 +10,16 @@
 <url><loc>https://iiasa.github.io/BNRTools/reference/conv_downscalr2ibis.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/grapes-notin-grapes.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/index.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/misc_emptyfolder.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/misc_objectSize.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/misc_sanitizeNames.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_clipMask.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_exportNetCDF.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_growGrid.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_mosaicTiffs.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_replaceGriddedNA.html</loc></url>
 <url><loc>https://iiasa.github.io/BNRTools/reference/spl_resampleRas.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_rwr.html</loc></url>
+<url><loc>https://iiasa.github.io/BNRTools/reference/spl_summarizeGPKGlayers.html</loc></url>
 </urlset>
 

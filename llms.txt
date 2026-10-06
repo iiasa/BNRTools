@@ -1,0 +1,113 @@
+# BNRTools
+
+This repository contains a common set of functions and scripts used by
+BNR Researchers. It’s purpose is to avoid replication of efforts across
+different groups and maintain common scripts in a structured way. Use
+cases might for example include the reprojection to certain grids, the
+conversion of model output formats to different format types or generic
+commonly used helper functions.
+
+# House rules
+
+Every BNR researcher can suggest and add new functions to the package.
+To maximize understanding and usability, please stick to the following
+house rules:
+
+- The `main` branch contains stable functions. The `dev` branch hot
+  updates. To avoid merging conflicts preferably create a new branch
+  named after yourself and then a pull request to `dev`.
+- Functions should be stored in the `R` folder and one script per file.
+- New scripts and functions should be named in camelCase with a prefix
+  suggesting content, e.g. for a spatial file `sp_aggregateNUTS`.
+- Each script should have at least a minimal documentation with title,
+  description, parameters, example and output function.
+- Where possible add unit tests to each function to catch wrong inputs
+  early on.
+
+See this [website](https://r-pkgs.org/) for more general help and
+examples in developing content for R-packages.
+
+## Installation
+
+The `BNRTools` package can be installed either through the `remotes`
+R-package or directly from r-universe.
+
+``` r
+
+# Install from source
+remotes::install_github("iiasa/BNRTools")
+# Or for the current development branch
+remotes::install_github("iiasa/BNRTools", "dev")
+
+# Installation 
+install.packages('BNRTools', repos = "https://iiasa.r-universe.dev")
+```
+
+## Code of Conduct
+
+Please note that the BNRTools project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
+
+## Contributors
+
+All contributions to this project are gratefully acknowledged using the
+[`allcontributors` package](https://github.com/ropensci/allcontributors)
+following the [all-contributors](https://allcontributors.org)
+specification. Contributions of any kind are welcome!
+
+[TABLE]
+
+# Package index
+
+## Conversion functions
+
+Key functions to convert model outputs for use in other modelling
+environments.
+
+- [`conv_downscalr2ibis()`](https://iiasa.github.io/BNRTools/reference/conv_downscalr2ibis.md)
+  :
+
+  Function to format a prepared GLOBIOM netCDF file for use in
+  `ibis.iSDM`
+
+## Spatial functions
+
+Helper function combine, aggregate or otherwise modify spatial files.
+
+- [`spl_resampleRas()`](https://iiasa.github.io/BNRTools/reference/spl_resampleRas.md)
+  : Resample raster
+- [`spl_exportNetCDF()`](https://iiasa.github.io/BNRTools/reference/spl_exportNetCDF.md)
+  : RExport a gridded raster to a NetCDF format
+- [`spl_replaceGriddedNA()`](https://iiasa.github.io/BNRTools/reference/spl_replaceGriddedNA.md)
+  : Replace NA values in gridded layers with a fixed value.
+- [`spl_growGrid()`](https://iiasa.github.io/BNRTools/reference/spl_growGrid.md)
+  : Grow a categorical SpatRaster by certain amount of pixels or
+  distance.
+- [`spl_rwr()`](https://iiasa.github.io/BNRTools/reference/spl_rwr.md) :
+  Calculates a rarity-weighted richness estimate from modelled species
+  distributions
+- [`spl_summarizeGPKGlayers()`](https://iiasa.github.io/BNRTools/reference/spl_summarizeGPKGlayers.md)
+  : Summarize a set of layers from geopackages
+- [`spl_clipMask()`](https://iiasa.github.io/BNRTools/reference/spl_clipMask.md)
+  : Clip and mask a raster using a raster or vector template
+- [`spl_mosaicTiffs()`](https://iiasa.github.io/BNRTools/reference/spl_mosaicTiffs.md)
+  : Mosaic a list of spatial layers together.
+
+## Miscellaneous functions
+
+Any other functions that are generally useful for a wide range of
+applications.
+
+- [`` `%notin%` ``](https://iiasa.github.io/BNRTools/reference/grapes-notin-grapes.md)
+  : Inverse of 'in' call
+- [`misc_sanitizeNames()`](https://iiasa.github.io/BNRTools/reference/misc_sanitizeNames.md)
+  : Sanitize variable names
+- [`spl_replaceGriddedNA()`](https://iiasa.github.io/BNRTools/reference/spl_replaceGriddedNA.md)
+  : Replace NA values in gridded layers with a fixed value.
+- [`misc_objectSize()`](https://iiasa.github.io/BNRTools/reference/misc_objectSize.md)
+  : Shows size of objects in the R environment
+- [`misc_emptyfolder()`](https://iiasa.github.io/BNRTools/reference/misc_emptyfolder.md)
+  : Check if a directory is empty (and create it if it doesn't exist)
+
