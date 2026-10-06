@@ -44,6 +44,8 @@ reference:
       - spl_exportNetCDF
       - spl_replaceGriddedNA
       - spl_growGrid
+      - spl_rwr
+      - spl_summarizeGPKGlayers
       - has_keyword("spatial")
 
   - title: Miscellaneous functions
@@ -52,4 +54,5 @@ reference:
     contents:
       - has_keyword("utils")
       - misc_objectSize
+      - misc_emptyfolder
       - misc_sanitizeNames

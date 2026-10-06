@@ -15,10 +15,10 @@ spl_mosaicTiffs(files, ofname = NULL, tempdir = NULL, dt = "INT2S", ...)
 
 \item{dt}{A \code{\link{character}} with the output datatype of the spatial file (Default: \code{"INT2S"}).}
 
-\item{...}{Any other parameters passed to \code{\link{writeRaster}}.}
+\item{...}{Any other parameters passed to \code{\link[terra:writeRaster]{writeRaster}}.}
 }
 \value{
-A \code{\link{SpatRaster}} or just a file.
+A \code{\link[terra:SpatRaster]{SpatRaster}} or just a file.
 }
 \description{
 Particular for large spatial files, it is often impractical
