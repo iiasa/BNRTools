@@ -18,7 +18,7 @@ Returns the unified total \code{\link[terra:ext]{terra::ext}} object.
 Expand an extent by a certain number
 }
 \examples{
-require(rast)
+require(terra)
 # Dummy raster
 f <- system.file("ex/elev.tif", package="terra")
 r <- terra::rast(f)

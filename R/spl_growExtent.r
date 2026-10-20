@@ -7,7 +7,7 @@
 #'
 #' @keywords utils
 #' @examples
-#' require(rast)
+#' require(terra)
 #' # Dummy raster
 #' f <- system.file("ex/elev.tif", package="terra")
 #' r <- terra::rast(f)
@@ -17,6 +17,7 @@
 #' (e2 <- spl_growExtent(e, f = 0.1))
 #'
 #' @author Martin Jung
+#' @export
 spl_growExtent <- function(e,f=0.1){
   assertthat::assert_that(inherits(e,'SpatExtent'),
                           is.numeric(f))
