@@ -44,6 +44,8 @@ reference:
       - spl_exportNetCDF
       - spl_replaceGriddedNA
       - spl_growGrid
+      - spl_growExtent
+      - spl_unifyExtents
       - spl_rwr
       - spl_summarizeGPKGlayers
       - has_keyword("spatial")
