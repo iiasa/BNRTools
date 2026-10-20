@@ -7,11 +7,23 @@ export(misc_objectSize)
 export(misc_sanitizeNames)
 export(spl_clipMask)
 export(spl_exportNetCDF)
+export(spl_growExtent)
 export(spl_growGrid)
 export(spl_mosaicTiffs)
 export(spl_replaceGriddedNA)
 export(spl_resampleRas)
 export(spl_summarizeGPKGlayers)
-importFrom(sf,st_layers)
+export(spl_unifyExtents)
+importFrom(sf,
+  st_bbox,
+  st_crs,
+  st_layers
+)
+importFrom(terra,
+  crs,
+  ext,
+  project,
+  same.crs
+)
 importFrom(tibble,tibble)
 importFrom(utils,object.size)

@@ -24,7 +24,7 @@
 #'
 #' @returns A object of the same type as the input but with no-data values replaced with \code{'value'}.
 #' @author Martin Jung
-#' @keywords internal, utils
+#' @keywords utils
 #' @export
 spl_replaceGriddedNA <- function(obj, value = 0, mask, verbose = FALSE){
   assertthat::assert_that(

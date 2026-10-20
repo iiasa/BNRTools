@@ -39,5 +39,4 @@ terra::plot(sfill)
 \author{
 Martin Jung
 }
-\keyword{internal,}
 \keyword{utils}
