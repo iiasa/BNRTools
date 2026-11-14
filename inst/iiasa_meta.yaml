@@ -27,7 +27,7 @@ file:
   date_modified: ""
   date_issued: ""
   processing_level: ""
-  license: "CC-BY 4.0"
+  license: "MIT"
   comment: "Uses attributes recommended by http://cfconventions.org"
   citation: ""
   acknowledgment: ""

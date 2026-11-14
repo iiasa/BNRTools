@@ -114,18 +114,17 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
 
           # And class units as description from over
           class_units <- fatt$dim[[col_class]]$units
-          class_units <-  class_units |>
-            base::strsplit(";") |>
-            # Remove emptyspace and special symbols
-            sapply(function(y)  gsub("[^0-9A-Za-z///' ]", "" , y, ignore.case = TRUE) ) |>
-            sapply(function(y)  gsub(" ", "" , y, ignore.case = TRUE) )
+          class_units <- base::strsplit(class_units, ";")
+          # Remove emptyspace and special symbols
+          class_units <- sapply(class_units, function(y)  gsub("[^0-9A-Za-z///' ]", "" , y, ignore.case = TRUE) )
+          class_units <- sapply(class_units, function(y)  gsub(" ", "" , y, ignore.case = TRUE) )
           # Convert to vector and make names
           class_units <- paste0(
             v, "__",
-            make.names(unlist(class_units)) |> as.vector()
+            as.vector(make.names(unlist(class_units)))
           )
 
-          ff <- ff |> split(col_class) |> stats::setNames(nm = class_units)
+          ff <- stats::setNames(split(ff, col_class), nm = class_units)
 
           # FIXME: Dirty hack to deal with the forest zone dimension
           # If there are more dimensions than 3, aggregate over them
@@ -153,9 +152,11 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
           assertthat::assert_that(!anyNA(res))
 
           # # And warp by projecting and resampling
-          ff <- ff |> stars::st_warp(bg, crs = sf::st_crs(bg),
-                                     cellsize = res, method = "near") |>
-            sf::st_transform(crs = sf::st_crs(template))
+          ff <- sf::st_transform(
+            stars::st_warp(ff, bg, crs = sf::st_crs(bg),
+                           cellsize = res, method = "near"),
+            crs = sf::st_crs(template)
+          )
         # }
         # Overwrite full dimensions
         full_dis <- stars::st_dimensions(ff)
@@ -204,13 +205,13 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
     if(length(times)>1){
       # In case times got removed
       times_first <- stars::st_get_dimension_values(sc, "time")[1]
-      sc <- sc |> dplyr::filter("time" == times_first)
+      sc <- dplyr::filter(sc, "time" == times_first)
       times <- times_first;rm(times_first)
     }
   } else if(period == "projection"){
     # Remove the first time entry instead, only using the last entries
     times_allbutfirst <- stars::st_get_dimension_values(sc, "time")[-1]
-    sc <- sc |> dplyr::filter("time" %in% times_allbutfirst)
+    sc <- dplyr::filter(sc, "time" %in% times_allbutfirst)
     times <- times_allbutfirst; rm(times_allbutfirst)
   }
   assertthat::assert_that(length(times)>0,
@@ -220,7 +221,7 @@ conv_downscalr2ibis <- function(fname, ignore = NULL,
   if(!is.null(template)){
     # Check that template is a raster, otherwise rasterize for GLOBIOM use
     if(inherits(template, "sf")){
-      o <- sc |> dplyr::slice("time" , 1) |> terra::rast()
+      o <- terra::rast(dplyr::slice(sc, "time" , 1))
       template <- terra::rasterize(template, o, field = 1)
       rm(o)
     }

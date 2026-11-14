@@ -48,6 +48,7 @@ reference:
       - spl_unifyExtents
       - spl_rwr
       - spl_summarizeGPKGlayers
+      - spl_mergeSmallPolygon
       - has_keyword("spatial")
 
   - title: Miscellaneous functions

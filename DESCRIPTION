@@ -11,7 +11,9 @@ Authors@R:
              email = "mhk.hesselbarth@gmail.com",
              comment = c(ORCID = "0000-0003-1125-9918"))
       )
-Description: What the package does (one paragraph).
+Description: BNRTools provides reusable R utilities for research workflows,
+    including data helpers, model-output conversion, NetCDF conversion, and
+    spatial vector and raster processing.
 License: MIT + file LICENSE
 URL: https://github.com/iiasa/BNRTools, https://iiasa.github.io/BNRTools/
 BugReports: https://github.com/iiasa/BNRTools/issues

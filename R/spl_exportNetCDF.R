@@ -105,8 +105,8 @@ spl_exportNetCDF <- function(obj,
   nc <- RNetCDF::create.nc(filename = filename)
 
   # Get range of coordinates and define them
-  focal_x <- terra::crds(obj)[,1] |> unique()
-  focal_y <- terra::crds(obj)[,2] |> unique()
+  focal_x <- unique(terra::crds(obj)[,1])
+  focal_y <- unique(terra::crds(obj)[,2])
 
   # Define x dimension
   RNetCDF::dim.def.nc( nc, dimname = "lon", dimlength = length(focal_x))
